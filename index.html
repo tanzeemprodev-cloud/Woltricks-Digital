@@ -42,7 +42,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="styles.css?v=7">
+<link rel="stylesheet" href="styles.css?v=13">
 </head>
 <body>
 
@@ -104,8 +104,107 @@
 </div>
 
 <!-- ============================================================
-     HERO
+     HERO SLIDER (HOME BANNER)
      ============================================================ -->
+<section class="hero" id="home" aria-label="Introduction">
+  <div class="hero-slide active" data-index="0">
+    <div class="slide-bg"></div>
+    <div class="grain"></div>
+  </div>
+  <div class="hero-slide" data-index="1">
+    <div class="slide-bg" style="background: linear-gradient(135deg, var(--navy-3), var(--teal-light) 70%, var(--mint));"></div>
+    <div class="grain"></div>
+  </div>
+  <div class="hero-slide" data-index="2">
+    <div class="slide-bg" style="background: linear-gradient(150deg, var(--teal), var(--navy) 60%);"></div>
+    <div class="grain"></div>
+  </div>
+
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="stars">
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg>
+        </span>
+        5.0 Rated &middot; 230+ Happy Patients in Johar Town
+      </div>
+
+      <div class="hero-slide-text active" data-index="0">
+        <h1>Your Healthiest Smile Starts Here</h1>
+        <p class="sub">Modern, compassionate dental care designed around your comfort, confidence, and long‑term oral health.</p>
+      </div>
+      <div class="hero-slide-text" data-index="1">
+        <h1>Advanced Care. Gentle Experience.</h1>
+        <p class="sub">Professional dental treatment delivered in a calm, comfortable environment built for every patient.</p>
+      </div>
+      <div class="hero-slide-text" data-index="2">
+        <h1>Confidence Begins With Your Smile</h1>
+        <p class="sub">Personalized treatment plans, honest guidance, and results designed to help you smile brighter.</p>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#booking" class="btn btn-cta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          Book an Appointment
+        </a>
+        <a href="tel:+923374800486" class="btn btn-outline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call 0337 4800486
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-nav-arrows">
+    <button class="hero-arrow" id="heroPrev" aria-label="Previous slide">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button class="hero-arrow" id="heroNext" aria-label="Next slide">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+  </div>
+
+  <div class="hero-progress" id="heroProgress">
+    <div class="seg active" data-index="0"><div class="fill"></div></div>
+    <div class="seg" data-index="1"><div class="fill"></div></div>
+    <div class="seg" data-index="2"><div class="fill"></div></div>
+  </div>
+
+  <div class="scroll-cue"><span class="line"></span>Scroll</div>
+</section>
+<!-- ============================================================
+     TRUST BAR
+     ============================================================ -->
+<section class="trust-bar" aria-label="Patient trust indicators">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg>
+        </div>
+        <div><strong>5.0 Rating</strong><span>Average patient score</span></div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div><strong><span class="counter" data-target="230">0</span>+ Reviews</strong><span>From our patients</span></div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6z"/></svg>
+        </div>
+        <div><strong>Modern Care</strong><span>Up-to-date dentistry</span></div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a6 6 0 0 1 12 0v2"/></svg>
+        </div>
+        <div><strong>Experienced Team</strong><span>Trained professionals</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ============================================================
      RANKFORGE INTRO SECTIONS
@@ -356,106 +455,6 @@
 
 </div>
 
-<section class="hero" id="home" aria-label="Introduction">
-  <div class="hero-slide active" data-index="0">
-    <div class="slide-bg"></div>
-    <div class="grain"></div>
-  </div>
-  <div class="hero-slide" data-index="1">
-    <div class="slide-bg" style="background: linear-gradient(135deg, var(--navy-3), var(--teal-light) 70%, var(--mint));"></div>
-    <div class="grain"></div>
-  </div>
-  <div class="hero-slide" data-index="2">
-    <div class="slide-bg" style="background: linear-gradient(150deg, var(--teal), var(--navy) 60%);"></div>
-    <div class="grain"></div>
-  </div>
-
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-eyebrow">
-        <span class="stars">
-          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg>
-        </span>
-        5.0 Rated &middot; 230+ Happy Patients in Johar Town
-      </div>
-
-      <div class="hero-slide-text active" data-index="0">
-        <h1>Your Healthiest Smile Starts Here</h1>
-        <p class="sub">Modern, compassionate dental care designed around your comfort, confidence, and long‑term oral health.</p>
-      </div>
-      <div class="hero-slide-text" data-index="1">
-        <h1>Advanced Care. Gentle Experience.</h1>
-        <p class="sub">Professional dental treatment delivered in a calm, comfortable environment built for every patient.</p>
-      </div>
-      <div class="hero-slide-text" data-index="2">
-        <h1>Confidence Begins With Your Smile</h1>
-        <p class="sub">Personalized treatment plans, honest guidance, and results designed to help you smile brighter.</p>
-      </div>
-
-      <div class="hero-actions">
-        <a href="#booking" class="btn btn-cta">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-          Book an Appointment
-        </a>
-        <a href="tel:+923374800486" class="btn btn-outline">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          Call 0337 4800486
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="hero-nav-arrows">
-    <button class="hero-arrow" id="heroPrev" aria-label="Previous slide">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-    </button>
-    <button class="hero-arrow" id="heroNext" aria-label="Next slide">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-    </button>
-  </div>
-
-  <div class="hero-progress" id="heroProgress">
-    <div class="seg active" data-index="0"><div class="fill"></div></div>
-    <div class="seg" data-index="1"><div class="fill"></div></div>
-    <div class="seg" data-index="2"><div class="fill"></div></div>
-  </div>
-
-  <div class="scroll-cue"><span class="line"></span>Scroll</div>
-</section>
-
-<!-- ============================================================
-     TRUST BAR
-     ============================================================ -->
-<section class="trust-bar" aria-label="Patient trust indicators">
-  <div class="container">
-    <div class="trust-grid">
-      <div class="trust-item">
-        <div class="trust-icon">
-          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg>
-        </div>
-        <div><strong>5.0 Rating</strong><span>Average patient score</span></div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <div><strong><span class="counter" data-target="230">0</span>+ Reviews</strong><span>From our patients</span></div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6z"/></svg>
-        </div>
-        <div><strong>Modern Care</strong><span>Up-to-date dentistry</span></div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a6 6 0 0 1 12 0v2"/></svg>
-        </div>
-        <div><strong>Experienced Team</strong><span>Trained professionals</span></div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ============================================================
      ABOUT
@@ -645,38 +644,153 @@
 </section>
 
 <!-- ============================================================
-     BEFORE / AFTER
+     PORTFOLIO
      ============================================================ -->
-<section class="ba section" id="before-after">
+<section class="portfolio section" id="work">
   <div class="container">
     <div class="section-head center reveal">
-      <div class="eyebrow" style="justify-content:center;">Real Transformations</div>
-      <h2>Before &amp; After Smile Gallery</h2>
-      <p>Drag the slider to compare results. Placeholder imagery shown — replace with real, patient-consented photography.</p>
+      <div class="eyebrow" style="justify-content:center;">Selected Work</div>
+      <h2>Projects That Drive Growth</h2>
+      <p>A snapshot of websites we've designed and developed — from brand sites to high-converting ecommerce stores.</p>
     </div>
 
-    <div class="ba-tabs reveal">
-      <button class="ba-tab active" data-cat="Teeth Whitening">Teeth Whitening</button>
-      <button class="ba-tab" data-cat="Smile Makeover">Smile Makeover</button>
-      <button class="ba-tab" data-cat="Cosmetic Dentistry">Cosmetic Dentistry</button>
-      <button class="ba-tab" data-cat="Restorative Dentistry">Restorative Dentistry</button>
+    <div class="portfolio-tabs reveal" role="tablist" aria-label="Portfolio filters">
+      <button class="portfolio-tab active" type="button" data-filter="all" role="tab" aria-selected="true">All</button>
+      <button class="portfolio-tab" type="button" data-filter="wordpress" role="tab" aria-selected="false">WordPress</button>
+      <button class="portfolio-tab" type="button" data-filter="shopify" role="tab" aria-selected="false">Shopify</button>
+      <button class="portfolio-tab" type="button" data-filter="business" role="tab" aria-selected="false">Business</button>
+      <button class="portfolio-tab" type="button" data-filter="ecommerce" role="tab" aria-selected="false">Ecommerce</button>
     </div>
 
-    <div class="ba-compare reveal" id="baCompare">
-      <div class="side before">
-        <span class="ba-tag before-tag">Before</span>
-      </div>
-      <div class="side after" id="baAfter">
-        <span class="ba-tag after-tag">After</span>
-      </div>
-      <div class="ba-handle" id="baHandle">
-        <div class="line"></div>
-        <div class="grip">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8L4 12l4 4M16 8l4 4-4 4"/></svg>
+    <div class="portfolio-grid reveal-stagger" id="portfolioGrid">
+
+      <article class="portfolio-card" data-tags="wordpress business">
+        <div class="portfolio-media ph deep" role="img" aria-label="Preview of Apex Dental corporate website">
+          <span class="ph-label">Website preview</span>
         </div>
-      </div>
+        <div class="portfolio-body">
+          <div class="portfolio-stack">
+            <span class="stack-item">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2zm-1.1 15.3-3.3-9.7h2l2.1 6.6 2.1-6.6h2l-3.4 9.7H10.9z"/></svg>
+              WordPress
+            </span>
+          </div>
+          <div class="portfolio-meta">
+            <span class="portfolio-type">Business</span>
+            <span class="portfolio-year">2025</span>
+          </div>
+          <h3>Apex Dental Group</h3>
+          <p>Corporate site with service pages, doctor profiles, and appointment CTAs built for local search visibility.</p>
+          <a href="#" class="btn btn-ghost btn-sm portfolio-btn">View Project</a>
+        </div>
+      </article>
+
+      <article class="portfolio-card" data-tags="shopify ecommerce">
+        <div class="portfolio-media ph warm" role="img" aria-label="Preview of Lumière skincare ecommerce store">
+          <span class="ph-label">Website preview</span>
+        </div>
+        <div class="portfolio-body">
+          <div class="portfolio-stack">
+            <span class="stack-item">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 7h16l-1.2 12.2A2 2 0 0 1 16.8 21H7.2a2 2 0 0 1-2-1.8L4 7zm4-3a4 4 0 0 1 8 0v2H8V4z"/></svg>
+              Shopify
+            </span>
+          </div>
+          <div class="portfolio-meta">
+            <span class="portfolio-type">Ecommerce</span>
+            <span class="portfolio-year">2025</span>
+          </div>
+          <h3>Lumière Skincare</h3>
+          <p>Conversion-focused storefront with product storytelling, upsells, and mobile-first checkout flow.</p>
+          <a href="#" class="btn btn-ghost btn-sm portfolio-btn">View Project</a>
+        </div>
+      </article>
+
+      <article class="portfolio-card" data-tags="wordpress ecommerce">
+        <div class="portfolio-media ph" role="img" aria-label="Preview of Northline outdoor gear store">
+          <span class="ph-label">Website preview</span>
+        </div>
+        <div class="portfolio-body">
+          <div class="portfolio-stack">
+            <span class="stack-item">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2zm-1.1 15.3-3.3-9.7h2l2.1 6.6 2.1-6.6h2l-3.4 9.7H10.9z"/></svg>
+              WordPress
+            </span>
+          </div>
+          <div class="portfolio-meta">
+            <span class="portfolio-type">Ecommerce</span>
+            <span class="portfolio-year">2024</span>
+          </div>
+          <h3>Northline Outdoor</h3>
+          <p>WooCommerce catalog with filtered collections, trust badges, and SEO-ready product templates.</p>
+          <a href="#" class="btn btn-ghost btn-sm portfolio-btn">View Project</a>
+        </div>
+      </article>
+
+      <article class="portfolio-card" data-tags="shopify business">
+        <div class="portfolio-media ph deep" role="img" aria-label="Preview of Craft &amp; Co brand site">
+          <span class="ph-label">Website preview</span>
+        </div>
+        <div class="portfolio-body">
+          <div class="portfolio-stack">
+            <span class="stack-item">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 7h16l-1.2 12.2A2 2 0 0 1 16.8 21H7.2a2 2 0 0 1-2-1.8L4 7zm4-3a4 4 0 0 1 8 0v2H8V4z"/></svg>
+              Shopify
+            </span>
+          </div>
+          <div class="portfolio-meta">
+            <span class="portfolio-type">Business</span>
+            <span class="portfolio-year">2024</span>
+          </div>
+          <h3>Craft &amp; Co Studio</h3>
+          <p>Brand site with portfolio grid, inquiry forms, and content structure built for content marketing.</p>
+          <a href="#" class="btn btn-ghost btn-sm portfolio-btn">View Project</a>
+        </div>
+      </article>
+
+      <article class="portfolio-card" data-tags="wordpress business">
+        <div class="portfolio-media ph warm" role="img" aria-label="Preview of Horizon Finance landing site">
+          <span class="ph-label">Website preview</span>
+        </div>
+        <div class="portfolio-body">
+          <div class="portfolio-stack">
+            <span class="stack-item">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2zm-1.1 15.3-3.3-9.7h2l2.1 6.6 2.1-6.6h2l-3.4 9.7H10.9z"/></svg>
+              WordPress
+            </span>
+          </div>
+          <div class="portfolio-meta">
+            <span class="portfolio-type">Business</span>
+            <span class="portfolio-year">2025</span>
+          </div>
+          <h3>Horizon Finance</h3>
+          <p>Lead-gen website with service funnels, blog architecture, and clear conversion paths for advisors.</p>
+          <a href="#" class="btn btn-ghost btn-sm portfolio-btn">View Project</a>
+        </div>
+      </article>
+
+      <article class="portfolio-card" data-tags="shopify ecommerce">
+        <div class="portfolio-media ph" role="img" aria-label="Preview of Velvet Home ecommerce store">
+          <span class="ph-label">Website preview</span>
+        </div>
+        <div class="portfolio-body">
+          <div class="portfolio-stack">
+            <span class="stack-item">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 7h16l-1.2 12.2A2 2 0 0 1 16.8 21H7.2a2 2 0 0 1-2-1.8L4 7zm4-3a4 4 0 0 1 8 0v2H8V4z"/></svg>
+              Shopify
+            </span>
+          </div>
+          <div class="portfolio-meta">
+            <span class="portfolio-type">Ecommerce</span>
+            <span class="portfolio-year">2024</span>
+          </div>
+          <h3>Velvet Home</h3>
+          <p>Lifestyle ecommerce build with collections, lifestyle imagery, and speed-optimized product pages.</p>
+          <a href="#" class="btn btn-ghost btn-sm portfolio-btn">View Project</a>
+        </div>
+      </article>
+
     </div>
-    <p class="ba-caption" id="baCaption">Teeth Whitening — drag to compare</p>
   </div>
 </section>
 
@@ -727,6 +841,24 @@
           <div class="team-meta"><span>11+ Years Experience</span><div class="team-social"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div></div>
         </div>
       </article>
+    </div>
+  </div>
+</section>
+
+</section>
+
+<!-- Reputation -->
+<section class="reputation section-tight">
+  <div class="container">
+    <div class="rep-card reveal">
+      <div class="rep-score">
+        <div>
+          <div class="rep-stars"><svg viewBox="0 0 20 20" fill="#F6A85F"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg><svg viewBox="0 0 20 20" fill="#F6A85F"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg><svg viewBox="0 0 20 20" fill="#F6A85F"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg><svg viewBox="0 0 20 20" fill="#F6A85F"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg><svg viewBox="0 0 20 20" fill="#F6A85F"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg></div>
+          <div class="rep-num">5.0<small>/5</small></div>
+          <span>230+ patient reviews</span>
+        </div>
+      </div>
+      <a href="#reviews" class="btn btn-navy">Read Patient Reviews</a>
     </div>
   </div>
 </section>
@@ -783,22 +915,6 @@
     <div class="testi-controls" id="testiControls">
       <button class="testi-dot active" data-i="0" aria-label="Show testimonial set 1"></button>
       <button class="testi-dot" data-i="1" aria-label="Show testimonial set 2"></button>
-    </div>
-  </div>
-</section>
-
-<!-- Reputation -->
-<section class="reputation section-tight">
-  <div class="container">
-    <div class="rep-card reveal">
-      <div class="rep-score">
-        <div>
-          <div class="rep-stars"><svg viewBox="0 0 20 20" fill="#F6A85F"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg><svg viewBox="0 0 20 20" fill="#F6A85F"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg><svg viewBox="0 0 20 20" fill="#F6A85F"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg><svg viewBox="0 0 20 20" fill="#F6A85F"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg><svg viewBox="0 0 20 20" fill="#F6A85F"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg></div>
-          <div class="rep-num">5.0<small>/5</small></div>
-          <span>230+ patient reviews</span>
-        </div>
-      </div>
-      <a href="#reviews" class="btn btn-navy">Read Patient Reviews</a>
     </div>
   </div>
 </section>
@@ -1168,38 +1284,24 @@
     svcToggle.textContent = expanded ? 'View All Services' : 'Show Fewer Services';
   });
 
-  /* ---------- BEFORE / AFTER SLIDER ---------- */
-  var baCompare = document.getElementById('baCompare');
-  var baAfter = document.getElementById('baAfter');
-  var baHandle = document.getElementById('baHandle');
-  var dragging = false;
-
-  function setBaPos(pct){
-    pct = Math.max(4, Math.min(96, pct));
-    baAfter.style.clipPath = 'inset(0 0 0 ' + pct + '%)';
-    baHandle.style.left = pct + '%';
-  }
-  function posFromEvent(clientX){
-    var rect = baCompare.getBoundingClientRect();
-    return ((clientX - rect.left) / rect.width) * 100;
-  }
-  baHandle.addEventListener('mousedown', function(){ dragging = true; });
-  window.addEventListener('mouseup', function(){ dragging = false; });
-  window.addEventListener('mousemove', function(e){ if(dragging){ setBaPos(posFromEvent(e.clientX)); } });
-  baHandle.addEventListener('touchstart', function(){ dragging = true; }, {passive:true});
-  window.addEventListener('touchend', function(){ dragging = false; });
-  window.addEventListener('touchmove', function(e){ if(dragging && e.touches[0]){ setBaPos(posFromEvent(e.touches[0].clientX)); } }, {passive:true});
-  baCompare.addEventListener('click', function(e){ if(e.target === baHandle || baHandle.contains(e.target)) return; setBaPos(posFromEvent(e.clientX)); });
-  setBaPos(50);
-
-  var baTabs = document.querySelectorAll('.ba-tab');
-  var baCaption = document.getElementById('baCaption');
-  baTabs.forEach(function(tab){
+  /* ---------- PORTFOLIO TABS ---------- */
+  var portfolioTabs = document.querySelectorAll('.portfolio-tab');
+  var portfolioCards = document.querySelectorAll('.portfolio-card');
+  portfolioTabs.forEach(function(tab){
     tab.addEventListener('click', function(){
-      baTabs.forEach(function(t){ t.classList.remove('active'); });
+      var filter = tab.getAttribute('data-filter');
+      portfolioTabs.forEach(function(t){
+        t.classList.remove('active');
+        t.setAttribute('aria-selected','false');
+      });
       tab.classList.add('active');
-      baCaption.textContent = tab.getAttribute('data-cat') + ' — drag to compare';
-      setBaPos(50);
+      tab.setAttribute('aria-selected','true');
+
+      portfolioCards.forEach(function(card){
+        var tags = (card.getAttribute('data-tags') || '').toLowerCase().split(/\s+/);
+        var show = filter === 'all' || tags.indexOf(filter) !== -1;
+        card.classList.toggle('is-hidden', !show);
+      });
     });
   });
 
