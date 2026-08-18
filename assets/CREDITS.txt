@@ -1,0 +1,27 @@
+RankForge free assets — download only (not attached to the site yet)
+
+PHOTOS — Unsplash License (https://unsplash.com/license)
+Free to use commercially; attribution appreciated, not required.
+hero-01-analytics.jpg          Unsplash photo-1460925895917-afdab827c52f
+hero-02-coding.jpg             Unsplash photo-1498050108023-c5249f4df085
+hero-03-team-office.jpg        Unsplash photo-1551434678-e076c223a692
+about-workspace.jpg            Unsplash photo-1522071820081-009f0129c71c
+about-collaboration.jpg        Unsplash photo-1553877522-43269d4ea984
+feature-dashboard.jpg          Unsplash photo-1551288049-bebda4e38f71
+tech-platforms.jpg             Unsplash photo-1516321318423-f06f85e504b3
+portfolio-fa-trader-dashboard  Unsplash photo-1551288049-bebda4e38f71
+portfolio-lumiere-skincare     Unsplash photo-1612817288484-6f916006741a
+portfolio-electricity-billing  Unsplash photo-1473341304170-971dccb5ac1e
+portfolio-craft-studio         Unsplash photo-1452860606245-08befc0ff44b
+portfolio-horizon-finance      Unsplash photo-1554224155-6726b3ff858f
+portfolio-velvet-home          Unsplash photo-1616486338812-3dadae4b4ace
+team-ayesha.jpg                Unsplash photo-1573496359142-b8d87734a5a2
+team-bilal.jpg                 Unsplash photo-1560250097-0b93528c311a
+team-sana.jpg                  Unsplash photo-1580489944761-15a19d654956
+team-omar.jpg                  Unsplash photo-1519085360753-af0119f7cbe7
+
+ICONS — Lucide (MIT) via lucide-static@0.460.0
+https://lucide.dev  — free for commercial use with license notice.
+Folder: assets/icons/services (10 service icons)
+Folder: assets/icons/ui (12 UI icons + fiverr badge)
+Folder: assets/icons/flags (ae, us, gb, au, de, ca) — Flagcdn
