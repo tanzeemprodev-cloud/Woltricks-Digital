@@ -38,7 +38,7 @@
 }
 
 *,*::before,*::after{ box-sizing: border-box; }
-html{ scroll-behavior: smooth; }
+html{ scroll-behavior: smooth; overflow-x: clip; }
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior: auto; }
   *,*::before,*::after{ animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
@@ -222,9 +222,16 @@ input,select,textarea{ font-family: inherit; }
 .nav-links a:hover{ color:#fff; }
 .nav-links a:hover::after{ width:100%; }
 .nav-right{ display:flex; align-items:center; gap:16px; }
-.nav-burger{ display:none; width:44px; height:44px; align-items:center; justify-content:center; border:none; background:transparent; }
-.nav-burger span, .nav-burger::before, .nav-burger::after{ content:''; display:block; width:24px; height:2px; background:#fff; border-radius:2px; transition: transform .3s ease, opacity .3s ease; }
-.nav-burger span{ margin: 6px 0; }
+.nav-burger{
+  display:none; width:44px; height:44px; padding:0;
+  flex-direction:column; align-items:center; justify-content:center; gap:5px;
+  border:none; background:transparent;
+}
+.nav-burger span, .nav-burger::before, .nav-burger::after{
+  content:''; display:block; width:22px; height:2px; background:#fff; border-radius:2px;
+  flex-shrink:0; transition: transform .3s ease, opacity .3s ease;
+}
+.nav-burger span{ margin:0; }
 .nav-burger.open span{ opacity:0; }
 
 .site-top.scrolled .nav{
@@ -402,10 +409,11 @@ input,select,textarea{ font-family: inherit; }
   background: var(--navy); position:relative; z-index:10; margin-top:-1px;
 }
 .trust-grid{
-  display:grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+  display:grid; grid-template-columns: repeat(4, 1fr); gap: 0; min-width: 0;
 }
 .trust-item{
   display:flex; align-items:center; gap:14px; padding: 30px 24px; border-right: 1px solid rgba(255,255,255,0.08);
+  min-width: 0;
 }
 .trust-item:last-child{ border-right:none; }
 .trust-icon{ width:44px; height:44px; border-radius:12px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
@@ -1230,8 +1238,15 @@ input,select,textarea{ font-family: inherit; }
 }
 @media (max-width: 768px){
   .section{ padding: 68px 0; }
-  .hero{ min-height: 100svh; }
-  .hero-nav-arrows{ bottom: 88px; right:20px; }
+  .hero{
+    min-height: 100svh;
+    align-items: flex-start;
+    padding-bottom: 96px;
+  }
+  .hero .container{ padding-top: 28px; }
+  .hero-nav-arrows{ bottom: 22px; right: 16px; }
+  .hero-arrow{ width: 42px; height: 42px; }
+  .scroll-cue{ left: 18px; bottom: 30px; transform: none; }
   .announce-bar{ height: auto; min-height: var(--announce-h); padding: 8px 0; }
   .announce-inner{ justify-content: space-between; }
   .services-grid{ grid-template-columns: 1fr; }
@@ -1252,15 +1267,37 @@ input,select,textarea{ font-family: inherit; }
   .cr-quote-card{ flex-direction:column; align-items:center; text-align:center; }
   .cr-stats{ gap:20px; }
 }
+@media (max-width: 600px){
+  .trust-grid{ grid-template-columns: 1fr; }
+  .trust-item{ border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .trust-item:nth-child(2){ border-right: none; }
+  .trust-item:last-child{ border-bottom: none; }
+}
+@media (max-width: 380px){
+  .nav .container{ gap:8px; }
+  .nav-right{ gap:6px; }
+  .nav .btn-sm{ padding:8px 10px; font-size:12px; }
+  .nav-logo-img{ height:42px; }
+}
 @media (max-width: 480px){
   .container{ padding:0 18px; }
   .rf-hero-inner,
   .rf-about-grid,
   .rf-mv-grid{ padding-left:18px; padding-right:18px; }
   .hero h1{ font-size: 34px; }
-  .hero-actions .btn{ width:100%; }
+  .hero-actions .btn,
+  .services-more .btn,
+  .wl-cta-row .btn,
+  .about-cta-row .btn{
+    width:100%;
+    max-width:100%;
+    white-space:normal;
+    text-align:center;
+  }
+  .wl-cta-row,
+  .about-cta-row{ flex-direction:column; align-items:stretch; }
+  .about-list li span{ white-space:normal; }
   .team-grid{ grid-template-columns: 1fr; }
-  .trust-grid{ grid-template-columns: 1fr 1fr; }
   .stat-card{ position:static; margin-bottom:20px; display:inline-flex; }
   .about-visual .ph.float{ display:none; }
 }
